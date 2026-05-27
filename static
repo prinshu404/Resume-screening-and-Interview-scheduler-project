@@ -1,1 +1,148 @@
+/* ---------- Global Styles ---------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #4a4949; /* dark background */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #e0e0e0;
+}
+h1{
+    color: #4cfae3;
+     text-shadow:
+        0 0 14px rgba(0, 191, 165, 0.55),
+        0 3px 20px rgba(0, 0, 0, 0.5);
 
+}
+/* Soft Floating Dark Glass Card */
+.container {
+    width: 850px;
+    margin: 50px auto;
+    padding: 42px;
+
+    background: rgba(51, 51, 51, 0.7); /* darker card */
+    border-radius: 22px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(0, 191, 165, 0.1); /* teal glow */
+        
+    animation: fadeIn 1s ease-out, floatUp 1.3s ease-out;
+}
+
+/* Fade + light float effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatUp {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+/* ---------- Form Inputs ---------- */
+input[type=text],
+input[type=email],
+input[type=file],
+input[type=date],
+input[type=time] {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 16px 0;
+
+    background: rgba(40, 40, 40, 0.75); /* darker input */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    font-size: 15px;
+    color: #e0e0e0;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(50, 50, 50, 0.95);
+
+    border-color: #00bfa5; /* teal focus */
+    box-shadow:
+        0 0 14px rgba(0, 191, 165, 0.55),
+        0 3px 20px rgba(0, 0, 0, 0.5);
+
+    transform: scale(1.02);
+}
+
+input::placeholder {
+    color: #a0a0a0;
+}
+
+/* ---------- Premium Button ---------- */
+button {
+    background: linear-gradient(135deg, #00e0c2, #00bfa5); /* neon teal gradient */
+    color: #000;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 14px;
+
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 6px 22px rgba(0, 191, 165, 0.45),
+        inset 0 0 12px rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 10px 28px rgba(0, 191, 165, 0.6),
+        inset 0 0 18px rgba(255, 255, 255, 0.15);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* ---------- Table ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+
+    background: rgba(35, 35, 35, 0.7); /* darker table */
+    border-radius: 16px;
+    overflow: hidden;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+
+th {
+    background: rgba(0, 191, 165, 0.2); /* teal header */
+    padding: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #e0ffff;
+}
+
+td {
+    padding: 16px;
+    color: #e0e0e0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Premium row hover */
+tr:hover td {
+    background: rgba(0, 191, 165, 0.08);
+    transition: 0.25s;
+}
